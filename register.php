@@ -1,5 +1,17 @@
 <?php
 require_once('config.php');
+
+// Set session cookie parameters to ensure the cookie expires when the browser is closed
+session_set_cookie_params([
+    'lifetime' => 0, // Session cookie will expire when the browser is closed
+    'path' => '/',
+    'domain' => '', // You can set your domain here if needed
+    'secure' => isset($_SERVER['HTTPS']), // Set to true if using HTTPS
+    'httponly' => true, // Makes the cookie accessible only through the HTTP protocol
+    'samesite' => 'Lax' // Adjust this value based on your needs
+]);
+
+
 session_start(); // Starts the session. //This line of code initiates a session in PHP. Sessions are a way to
 // preserve data across subsequent HTTP requests.
 // session_start() must be called before any output is sent to the browser,typically at the beginning of
@@ -7,13 +19,31 @@ session_start(); // Starts the session. //This line of code initiates a session 
 
 // Check if the form is submitted
 if (isset($_POST['create'])) {
-    // Get form data
+
+    // Retrieve form data
+
     $username = $_POST['username'];
     $password = $_POST['password'];
     $email = $_POST['email'];
+    $passwordConfirmation = $_POST["password-confirm"];
 
+
+    // Validate form data (you may want to add more validation or turn off validation)
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format. <br>";
+        // You can choose to exit here if you want to stop further processing,
+        // or you can just display the error message and continue.
+       // exit;
+    }
+    if ($password !== $passwordConfirmation) {
+        echo "Passwords do not match. ";
+        // Redirect after 4 seconds
+        header("refresh:4;url=register.php");
+
+        exit;
+    }
     // Prepare SQL statement
-    $sql = "INSERT INTO Users_mySite (userName, hashedPword, email) VALUES (?, ?, ?)"; // Here, these must correspond to the database field names.
+    $sql = "INSERT INTO Users_simpleLogin (userName, hashedPword, email) VALUES (?, ?, ?)"; // Here, these must correspond to the database field names.
     $stmtInsert = $pdo->prepare($sql);
 
     // Execute the prepared statement
@@ -78,12 +108,20 @@ if (isset($_POST['create'])) {
                 <h1>Registration</h1>
                 <p>Please complete the form</p>
                 <form action="register.php" method="post">
+
+                    <!-- Username field -->
                     <label for="username">Username:</label>
                     <input class="form-control" type="text" name="username" required id="username" placeholder="Your Username">
 
+                    <!-- Password field -->
                     <label for="password">Password:</label>
                     <input class="form-control" type="password" name="password" required id="password" placeholder="Your Password">
 
+                    <!-- Confirm Password field -->
+                    <label for="password-confirm"><strong>Confirm Password</strong><span class="required error" id="password-confirm"></span></label>
+                    <input type="password" class="form-control" id="password-confirm" name="password-confirm" placeholder="Confirm  password">
+
+                    <!-- Email Address field -->
                     <label for="email">Email:</label>
                     <input class="form-control" type="email" name="email"  placeholder="Your email">
 

@@ -3,10 +3,10 @@
   <h1>SimpleLogin: A Full-Stack Demonstration</h1>
 
   <p>SimpleLogin is a web application designed to showcase my full-stack development capabilities. It provides a user-friendly platform for managing login credentials securely.</p>
-
+Clean and Simple: No bells and whistles, no fancy js. Just a basic structure for creating a login page. This is designed as a learning tool.
   <h2>Features</h2>
   <ul class="feature-list">
-    <li>Secure Login Management: Store and organize login credentials for various websites.</li>
+    <li>Secure Login Management: Store and hash organize login credentials for various websites.</li>
     <li>User Authentication: Secure user login using a backend database (MySQL) with robust password hashing.</li>
     <li>Front-End Interface: Intuitive user experience built with HTML, CSS, and PHP, enhanced by Bootstrap for responsiveness.</li>
   </ul>
@@ -26,6 +26,9 @@
 
   <h2>Note</h2>
   <p>This is a basic demonstration project. For production use, consider additional security measures.</p>
+
+If you enjoyed this file and found it useful,please feel free to leave a Bitcoin donation: <br>
+BTC: bc1ql63v3wnn0wjw824m9r4peeajm7ynhzt2wqdmhc
 
   <div class="copyright">
     <p>&copy; Ricki Angel 2024</p>

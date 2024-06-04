@@ -2,7 +2,7 @@
 
 // Database configuration
 $host = "localhost";
-$dbname = "mySite";
+$dbname = "simpleLogin";
 $username = "root";
 $password = "root";
 
