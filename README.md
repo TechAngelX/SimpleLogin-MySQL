@@ -1,6 +1,7 @@
 # SimpleLogin: A Full-Stack Demonstration
 
-![Screenshot](/simpleLogin/images/screenshot1.png)
+<img src="images/screenshot1.png" style="border: 5px solid #ccc;">
+
 
 SimpleLogin is a web application designed to showcase my full-stack development capabilities. It provides a user-friendly platform for managing login credentials securely.
 
@@ -25,7 +26,17 @@ Create an account, add login credentials, and manage them securely within the ap
 ## Note
 This is a basic demonstration project. For production use, consider additional security measures.
 
-If you enjoyed this file and found it useful, please feel free to leave a Bitcoin donation:
-BTC: bc1ql63v3wnn0wjw824m9r4peeajm7ynhzt2wqdmhc
+If you enjoyed this file and found it useful, please feel free to leave a Bitcoin donation and buy us a coffee:
 
+<div style="text-align: center;">
+    <img src="images/btcLogo.png" alt="Bitcoin Logo" style="border: 5px solid #ccc;">
+    <p style="font-size: 18px;">Support us with Bitcoin</p>
+    <p><strong>BTC:<strong> bc1ql63v3wnn0wjw824m9r4peeajm7ynhzt2wqdmhc</Strong></p>
 &copy; Ricki Angel 2024
+
+</div>
+
+
+
+
+
