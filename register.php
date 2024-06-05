@@ -125,6 +125,9 @@ mail($to, $subject, $message, $headers);
                 </div>
             </div>
 
+            <!-- TODO: implement a hash password function -->
+
+
             <!-- Error message for passwords mismatch -->
             <p id="password-mismatch-error" class="text-danger"></p>
 

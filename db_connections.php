@@ -4,7 +4,7 @@
 $host = "localhost";
 $dbname = "simpleLogin";
 $username = "root";
-$password = "root";
+$password = "root"; //Change this ... obv!
 
 // Attempt to connect to the database
 try {
