@@ -3,8 +3,8 @@
 // Database configuration
 $host = "localhost";
 $dbname = "simpleLogin";
-$username = "root";
-$password = "root"; //Change this ... obv!
+$username = "simpleAdmin";
+$password = "4TKm3B2PTJG7XRbI"; //Change this ... obv!
 
 // Attempt to connect to the database
 try {

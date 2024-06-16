@@ -46,7 +46,7 @@ if (isset($_POST['create'])) {
     $stmtInsert = $pdo->prepare($sql);
 
     // Execute the prepared statement
-    $result = $stmtInsert->execute([$username, $password, $email]); // Not the fields from your database.
+    $result = $stmtInsert->execute([$username, $password, $email]);// Not the fields from your database.
 
     // Check if the user was submitted successfully
     if ($result) {
